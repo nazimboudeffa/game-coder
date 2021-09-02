@@ -30,8 +30,11 @@ function project() {
   }
 
   this.update = function () {
-    var splash = document.createTextNode(this.states[0].text)
-    editor.codearea.appendChild(splash)
+    var text = `var game = new Phaser.Game(640, 360, Phaser.AUTO, 'vision', { preload: preload, create: create, update: update });` + this.states[0].text
+    var splash = document.createTextNode(text)
+    //var splashCode = document.createTextNode(this.states[0].text)
+    editor.gamescript.appendChild(splash)
+    //editor.codearea.appendChild(splashCode)
   }
 }
 

@@ -1,0 +1,30 @@
+#wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    #wrapper {
+      flex-direction: column;
+    }
+  }
+
+#assets {
+    width: 25%;
+}
+
+#vision {
+    width: 640px;
+    height: 360px;
+    background-color: blue;
+}
+
+#codearea {
+    width: 50%;
+    height: 100px;
+}
+
+#asset{
+    width: 25%;
+}
