@@ -2,18 +2,18 @@
 <html>
 
 <head>
-    <script src="vendor/script.js"></script>
-    <link rel="stylesheet" href="vendor/style.css" />
+    <link rel="stylesheet" href="vendor/styles/style.css" />
 </head>
 
 <body>
 
 <div>
-    <center>
-        <h3>Welcome to Game Coder</h3>
-        <button id="new">New project</button>
-        <button id="open">Open project</button>
-    </center>
+    <script>
+        const GCoder = require('./vendor/editor');
+        const editor = new GCoder();
+        editor.install(document.body)
+        editor.start()
+    </script>
 </div>
 
 </body>
