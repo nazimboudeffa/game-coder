@@ -6,14 +6,13 @@ const splash = require('./splash')
 function project() {
 
   this.states = []
-  this.state = new state()
   this.index = 0
 
   this.start = function() {
     if (this.states.length === 0) {
-      editor.project.states.push(new splash())
-      //editor.go.to_state(0)
-      editor.update()
+      this.states.push(new splash())
+      //this.go.to_state(0)
+      this.update()
     }
   }
 
@@ -31,7 +30,8 @@ function project() {
   }
 
   this.update = function () {
-    this.state.commit(editor.codearea.value)
+    var splash = document.createTextNode(this.states[0].text)
+    editor.codearea.appendChild(splash)
   }
 }
 
